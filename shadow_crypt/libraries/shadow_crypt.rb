@@ -1,6 +1,6 @@
 #test needs to added (../../test/shadow_crypt)to run this profile from cookbook directly assuming path like /test/shadow_crypt in br_fluent
 lib=File.expand_path('../vendor/gems/**/lib', __FILE__)
-$:.unshift(lib.to_s)
+$:.unshift(*Dir[lib])
 require 'pry'
 binding.pry
 require 'unix_crypt'
